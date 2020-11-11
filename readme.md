@@ -1,6 +1,6 @@
 # 課題：02 じゃんけんのwebサイト
 
-デプロイ先：https://ayakonishi.github.io/CheeseAcademy/
+デプロイ先：https://ayakonishi.github.io/02_26_JankenBaseball/
 
 ## プロダクトの紹介
 - じゃんけんを応用し、バッティングゲームを作りました
