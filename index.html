@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <title>じゃんけん野球</title>
+
+</head>
+
+<body>
+  <header>
+    <!-- <h1>野球ゲーム！</h1> -->
+    <h1>ホームランをかっ飛ばそう！！</h1>
+  </header>
+
+  <main>
+    <div class="gamen_box">
+      <div class="gamen_img">
+        <!-- <img class="cheer" src="img/蓮1.jpg" alt="チア">
+        <img class="ground" src="img/baseball-3778774_1280.png" alt="グラウンド"> -->
+        <img id="ground_img" class="ground" src="img/ground.jpg" alt="グラウンド">
+      </div>
+      <ul>
+        <li id="batter_btn">バットを振る</li>
+      </ul>
+      <!-- <div id="comp" class="pitcher"></div>
+      <div id="judgment" class="score"></div> -->
+      <div id="comp"></div>
+      <div id="judgment" class="score"></div>
+    </div>
+  </main>
+
+  <!-- <footer>フッター</footer> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    /* スコア */
+    $('#batter_btn').on('click', function () {
+        $('#ground_img').attr('src', 'img/ground.jpg');
+        const randomNumber = Math.floor(Math.random() * 100);
+        if (randomNumber <= 60) {
+          $('#judgment').html('空振り！');
+        } else if (randomNumber <= 80) {
+          $('#judgment').html('シングルヒット！');
+        } else if (randomNumber <= 90) {
+          $('#judgment').html('ツーベース！');
+        } else if (randomNumber <= 95) {
+          $('#judgment').html('スリーベース！');
+        } else if (randomNumber <= 100) {
+          $('#judgment').html('ホームラン！！');
+          $('#ground_img').attr('src', 'img/ground_kami.jpg');
+        } else {
+          console.log("エラー");
+        }
+      });
+
+  </script>
+
+</body>
+
+</html>
